@@ -1,0 +1,52 @@
+{
+  "animes": [
+    {
+      "titulo": "One Piece",
+      "des_corta": "Luffy se va de aventuras buscando el One Piece",
+      "des_larga": "One Piece es un manga escrito e ilustrado por el mangaka japonés Eiichirō Oda. Comenzó a publicarse en la revista Japonesa Weekly Shōnen Jump el 22 de julio de 1997 y a la fecha se han publicado 105 volúmenes.",
+      "author": "Eiichiro Oda",
+      "imagen": "assets/img/One.jpg",
+      "id": 1
+    },
+    {
+      "titulo": "Naruto",
+      "des_corta": "Naruto es un niño ninja el cuál quiere convertirse en el mejor ninja de su pueblo",
+      "des_larga": "Naruto, romanizada como NARUTO, es una serie animada de origen japonés basada en el manga del mismo nombre, escrito e ilustrado por Masashi Kishimoto.",
+      "author": "Masashi Kishimoto",
+      "imagen": "assets/img/Naruto.jpg",
+      "id": 2
+    },
+    {
+      "titulo": "Dragon Ball",
+      "des_corta": "Dragon Ball es un manga escrito e ilustrado por Akira Toriyama.",
+      "des_larga": "Dragon Ball es un manga escrito e ilustrado por Akira Toriyama. Fue publicado originalmente en la revista Shōnen Jump, de la editorial japonesa Shūeisha, entre 1984 y 1995.",
+      "author": "Akira Toriyama",
+      "imagen": "assets/img/Dragon.jpg",
+      "id": 3
+    },
+    {
+      "titulo": "Psyco-Pass",
+      "des_corta": "En el futuro cercano, es posible medir el potencial de violencia de cada persona.",
+      "des_larga": "En el futuro cercano, es posible medir el potencial de violencia de cada persona. La inspectora Akane Tsunemori es parte de una unidad especial que persigue a estos individuos potencialmente peligrosos.",
+      "author": "Makoto Fukami",
+      "imagen": "assets/img/Psyco.jpg",
+      "id": 4
+    },
+    {
+      "titulo": "Made in Abyss",
+      "des_corta": "Made in Abyss es una serie de manga escrita e ilustrada por Akihito Tsukushi.",
+      "des_larga": "Made in Abyss es una serie de manga escrita e ilustrada por Akihito Tsukushi. Es serializado en línea desde octubre de 2012 en el sitio Web Comic Gamma de la editora Takeshobo, y ha sido recogido en once volúmenes tankōbon. La productora Kinema Citrus lanzó una adaptación al anime el 7 de julio de 2017.​",
+      "author": "Akihito Tsukushi",
+      "id": 5,
+      "imagen": "assets/img/Abyss.jpg"
+    },
+    {
+      "titulo": "Danganrompa",
+      "des_corta": "Danganronpa: The Animation es una serie de televisión de anime producida por Lerche",
+      "des_larga": "Danganronpa: The Animation es una serie de televisión de anime producida por Lerche, basada en la novela visual de Spike Chunsoft de 2010 Danganronpa: Trigger Happy Havoc. La adaptación de trece episodios se emitió en el bloque de programación Animeism de MBS entre julio y septiembre de 2013.",
+      "author": "Spike Chunsoft",
+      "imagen": "assets/img/Danga.jpg",
+      "id": 6
+    }
+  ]
+}

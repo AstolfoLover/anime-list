@@ -1,0 +1,8 @@
+
+<app-header *ngIf="router.url === '/'"></app-header>
+
+
+<app-card-main *ngIf="router.url === '/'; else animesAll" [limit]="3"></app-card-main>
+<ng-template #animesAll><app-card-main></app-card-main></ng-template>
+
+

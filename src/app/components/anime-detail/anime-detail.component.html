@@ -1,0 +1,115 @@
+<div *ngIf="anime;else animeNotFound" class="container mt-5">
+  <div class="text-center">
+    <h1 class="pt-4">{{ anime.titulo | uppercase }}</h1>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <span>Show Accessibility Settings</span>
+
+    </div>
+  </div>
+
+    <div class="row">
+      <label for="all" class="col">
+        <input type="radio" class="form-check-input" id="all" name="acc" value="all" [(ngModel)]="showAccSettings">
+        All
+      </label>
+      <label for="font-size" class="col">
+        <input type="radio" class="form-check-input" id="font-size" name="acc" value="font-size" [(ngModel)]="showAccSettings">
+        Font Size
+      </label>
+      <label for="color" class="col">
+        <input type="radio" class="form-check-input" id="color" name="acc" value="color" [(ngModel)]="showAccSettings">
+        Color
+      </label>
+      <label for="none" class="col">
+        <input type="radio" class="form-check-input" id="none" name="acc" value="none" [(ngModel)]="showAccSettings">
+        None
+      </label>
+    </div>
+
+    <div [ngSwitch]="showAccSettings">
+      <div *ngSwitchCase="'all'">
+        <div class="row pb-2 mt-2 mb-2">
+          <div class="col">
+            <div>
+              <span>Select the font size for the description:</span>
+            </div>
+            <div>
+              <input type="number" min="1" max="50" [(ngModel)]="fontSize">
+            </div>
+          </div>
+          <div class="col">
+            <div>
+              <span>Select the color for the description:</span>
+            </div>
+            <div>
+              <input type="color" [(ngModel)]="color"> Current Color: {{ color }}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div *ngSwitchCase="'font-size'">
+        <div class="row pb-2 mt-2 mb-2">
+          <div class="col">
+            <div>
+              <span>Select the font size for the description:</span>
+            </div>
+            <div>
+              <input type="number" min="1" max="50" [(ngModel)]="fontSize">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div *ngSwitchCase="'color'">
+        <div class="row pb-2 mt-2 mb-2">
+          <div class="col">
+            <div>
+              <span>Select the color for the description:</span>
+            </div>
+            <div>
+              <input type="color" [(ngModel)]="color"> Current Color: {{ color }}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div *ngSwitchCase="'none'">
+
+      </div>
+      <div *ngSwitchDefault>Invalid Settings</div>
+    </div>
+
+
+  <div class="row">
+    <div class="col-12 col-md-3">
+      <img class="" [src]="anime.imagen" style="width: 100%; border: 2px solid black">
+    </div>
+    <div class="col">
+
+      <p [ngStyle]="{'font-size.px': fontSize, 'color': color}">{{ anime.des_larga }}</p>
+    </div>
+  </div>
+
+  <div class="row mt-2">
+    <div class="col-12 col-md-3 text-center my-auto">
+      <span style="font-size: 18px"><span class="fw-bold">Author: {{ anime.author }}</span></span>
+    </div>
+
+    <div class="col">
+      <button routerLink="/animes/edit/{{anime.id}}" type="button" class="btn btn-success">Edit</button>
+      <button type="button" (click)="onDeleteClick()" class="btn btn-danger">Delete</button>
+    </div>
+  </div>
+  <div class="row-cols-4 my-5">
+    <a href="/animes" class="btn btn-warning mx-auto btn-outline-dark">Go Back</a>
+  </div>
+</div>
+
+<ng-template #animeNotFound>
+  <div class="container mt-5">
+    <div class="text-center">
+      <h1 class="pt-4">Anime Not Found</h1>
+    </div>
+  </div>
+</ng-template>

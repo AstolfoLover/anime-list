@@ -1,0 +1,11 @@
+<main class="container">
+
+  <!-- ng if con parametros de ruta-->
+
+  <h1 *ngIf="router.url == '/'; else allAnimes" class="text-center my-4 text-decoration-underline" style="font-size: 75px; font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">Popular Series</h1>
+  <ng-template #allAnimes><h1 class="text-center my-5 text-decoration-underline" style="font-size: 75px; font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">Anime Database</h1></ng-template>
+
+<div class="row row-cols-4 justify-content-md-center">
+    <app-anime-card (delete)="onDelete()" class="col card my-4 mx-4" style=" border: 1px solid black;" *ngFor="let anime of animes" [anime]="anime"></app-anime-card>
+  </div>
+</main>

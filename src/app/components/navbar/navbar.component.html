@@ -1,0 +1,8 @@
+<nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top pb-0">
+
+  <div class="container px-5">
+      <a class="navbar-brand" style="font-size: 24px;" routerLink="/">AnimeList</a>
+      <span class="navbar-brand" *ngIf="router.url === '/'">{{currentDate | customDate}}</span>
+      <a class="navbar-brand" *ngIf="router.url === '/animes'" routerLink="/animes/create">Añadir Anime</a>
+  </div>
+</nav>

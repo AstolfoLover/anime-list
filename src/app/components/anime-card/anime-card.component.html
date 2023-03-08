@@ -1,0 +1,12 @@
+
+  <img class="card-img-top " [src]="anime.imagen" alt="Card image cap" />
+  <div class="card-body">
+    <h5 class="card-title">{{ anime.titulo }}</h5>
+    <p class="card-text">{{ anime.des_corta }}</p>
+    <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+      <button routerLink="/animes/{{anime.id}}" type="button" class="btn btn-warning">See more...</button>
+      <button routerLink="/animes/edit/{{anime.id}}" type="button" class="btn btn-success">Edit</button>
+      <button type="button" (click)="onDeleteClick()" class="btn btn-danger">Delete</button>
+    </div>
+  </div>
+

@@ -1,0 +1,40 @@
+<div class="my-5 row">
+    <div class="col-md-4 my-4" style="float: none; margin-left: auto; margin-right: auto">
+        <h1 class="text-center">Formulario Anime</h1>
+        <hr>
+
+        <form [formGroup]="frmAnime" (submit)="enviarDatos()" autocomplete="off">
+            <div class="mb-3">
+              <label for="InputTitulo" class="form-label">Título</label>
+              <input type="text" class="form-control" formControlName="titulo">
+              <small *ngIf="frmAnime.controls['titulo'].hasError('required') && frmAnime.controls['titulo'].touched" class="text-danger font-Italic">Dato Requerido</small>
+              <small *ngIf="frmAnime.controls['titulo'].hasError('pattern')" class="text-danger font-Italic">Formato Incorrecto</small>
+            </div>
+            <div class="mb-3">
+                <label for="InputCorta" class="form-label">Descripción Corta</label>
+                <textarea class="form-control" formControlName="des_corta" rows="4" cols="50"></textarea>
+                <small *ngIf="frmAnime.controls['des_corta'].hasError('required') && frmAnime.controls['des_corta'].touched" class="text-danger font-Italic">Dato Requerido</small>
+
+              </div>
+              <div class="mb-3">
+                <label for="InputLarga" class="form-label">Descripción Larga</label>
+                <textarea class="form-control" formControlName="des_larga" rows="4" cols="50"></textarea>
+                <small *ngIf="frmAnime.controls['des_larga'].hasError('required') && frmAnime.controls['des_larga'].touched" class="text-danger font-Italic">Dato Requerido</small>
+
+              </div>
+              <div class="mb-3">
+                <label for="InputAutor" class="form-label">Author</label>
+                <input type="text" class="form-control" formControlName="author">
+                <small *ngIf="frmAnime.controls['author'].hasError('required') && frmAnime.controls['author'].touched" class="text-danger font-Italic">Dato Requerido</small>
+                <small *ngIf="frmAnime.controls['author'].hasError('pattern')" class="text-danger font-Italic">Formato Incorrecto</small>
+              </div>
+              <div class="mb-3">
+                <label for="InputImagen" class="form-label">Imagen</label>
+                <input type="text" class="form-control" formControlName="imagen">
+                <small *ngIf="frmAnime.controls['imagen'].hasError('required')" class="text-danger font-Italic">Dato Requerido</small>
+
+              </div>
+            <button type="submit" [disabled]="frmAnime.invalid" [ngClass]="{'btn-primary': anime, 'btn-secondary': !anime}" class="btn">{{ anime ? "Update" : "Create" }}</button>
+          </form>
+    </div>
+</div>
